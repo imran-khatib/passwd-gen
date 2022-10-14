@@ -1,5 +1,9 @@
 #!/bin/bash
 clear
+GREEN="\e[92m"
+STOP="\e[0m"
+printf "${GREEN}"
+
 echo "================== Password Generater =================="
 echo
 echo "1)Random Password. "
@@ -13,6 +17,7 @@ read option
 echo
 echo "========================================================"
 echo
+printf "${STOP}"
 case "$option" in 
 	1)echo "Genrating Random Password..." && sleep 3s
 	  echo  "TheGenerated Password is:" &&	pwgen 10 1
